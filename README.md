@@ -16,9 +16,8 @@ cd <project-directory>
 npm install
 ```
 
-### Available Scripts
 
-1. Create a .env File
+### 1. Create a .env File
 Create a file named .env with the following structure:
 ```bash
 SEPOLIA_RPC_URL=obtain this URL from Infura or Alchemy
@@ -26,20 +25,20 @@ PRIVATE_KEY=YourPrivateKey
 ```
 
 
-2. Deploy the Contract on the Sepolia Network:
+### 2. Deploy the Contract on the Sepolia Network:
 
    
 ```bash
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-3. Configure the Dapp using your contract address in index.html:
+### 3. Configure the Dapp using your contract address in index.html:
    
 ```bash
 const CONTRACT_ADDRESS = '0xYourDeployedContractAddress';
 ```
 
-4. Run a Local Server:
+### 4. Run a Local Server:
 Deploy contracts using Hardhat Ignition (example with Lock module):
 
 ```bash
