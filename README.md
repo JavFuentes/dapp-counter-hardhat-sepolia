@@ -1,6 +1,6 @@
-# Sample Hardhat Project - Scroll Testnet
+# Counter Hardhat Dapp - Sepolia Testnet
 
-This project showcases a basic setup using Hardhat for Ethereum smart contract development on the Scroll Testnet. 
+This project showcases a basic setup using Hardhat for Ethereum smart contract development on the Sepolia Testnet. 
 It includes a sample Solidity contract, a test script, and utilizes Hardhat Ignition for contract deployment.
 
 ## Getting Started
@@ -15,27 +15,33 @@ cd <project-directory>
 ```bash
 npm install
 ```
-### Available Scripts
 
-1. Run Hardhat Commands
-Explore available Hardhat commands:
+
+### 1. Create a .env File
+Create a file named .env with the following structure:
 ```bash
-npx hardhat help
+SEPOLIA_RPC_URL=obtain this URL from Infura or Alchemy
+PRIVATE_KEY=YourPrivateKey
 ```
 
-2. To generate gas reports during tests:
+
+### 2. Deploy the Contract on the Sepolia Network:
+
+   
 ```bash
-REPORT_GAS=true npx hardhat test
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-3. Local Development Network
-Spin up a local Hardhat node:
+### 3. Configure the Dapp using your contract address in index.html:
+   
 ```bash
-npx hardhat node
+const CONTRACT_ADDRESS = '0xYourDeployedContractAddress';
 ```
 
-4. Deploy Using Hardhat Ignition
+### 4. Run a Local Server:
 Deploy contracts using Hardhat Ignition (example with Lock module):
+
 ```bash
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+cd src
+lite-server
 ```
